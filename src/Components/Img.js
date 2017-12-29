@@ -10,9 +10,9 @@ export default class Img extends Component {
     return (
       <li>
         <a href="#" onClick={this.handleClick}>
-          <img src={this.props.url} alt="Unsplash Image here"/>
+          <img src={this.props.url} alt="Unsplash"/>
         </a>
-        <p>
+        <p className="info">
           Photo by
           <a href={this.props.user}>{this.props.name}</a>
           <a href={this.props.link}> See on Unsplash</a>

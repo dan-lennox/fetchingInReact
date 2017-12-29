@@ -1,0 +1,9 @@
+.feature-image img {
+  float: left;
+  width: auto;
+  max-height: 1000px;
+}
+
+.feature-image .info {
+  display: none;
+}

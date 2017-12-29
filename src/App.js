@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import './App.css';
+import './css/featureArea.css';
 import FeatureImg from './Components/FeatureImg';
 import ImgList from './Components/ImgList';
 import SearchForm from './Components/SearchForm';
@@ -49,14 +50,18 @@ export default class App extends Component {
 			<div>
 				<div className="main-header">
 					<div className="inner">
-						<h1 className="main-title">ImageSearch</h1>
+						<h1 className="main-title">GFH Unsplash Testing</h1>
 						<SearchForm onSearch={this.performSearch} />
 					</div>
 				</div>
+        <div className="feature-area">
+          { (this.state.loadingState) ? null : <FeatureImg img={this.state.featureImg}/> }
+          <img className="content-demo" src={'./content-demo.png'} alt="content demo" />
+        </div>
 				<div className="main-content">
 					{this.state.loadingState
 						? <p>Loading</p>
-						: <div><FeatureImg img={ this.state.featureImg}/><ImgList images={this.state.imgs} select={this.selectImg} /></div>}
+						: <ImgList images={this.state.imgs} select={this.selectImg} />}
 				</div>
 			</div>
 		);
