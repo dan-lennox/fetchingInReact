@@ -6,7 +6,6 @@ import './css/featureArea.css';
 import FeatureImg from './Components/FeatureImg';
 import ImgList from './Components/ImgList';
 import SearchForm from './Components/SearchForm';
-import cred from './cred.js';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -33,10 +32,9 @@ export default class App extends Component {
   };
 
 	randomImage = (query = 'sun') => {
-	  console.log('called and query is: ', query);
     axios
       .get(
-        `https://api.unsplash.com/photos/random/?query=${query}&orientation=portrait&client_id=${cred.APP_ID}`
+        `https://api.unsplash.com/photos/random/?query=${query}&orientation=portrait&client_id=${process.env.APP_ID}`
       )
       .then(data => {
         console.log('data: ', data);
@@ -52,7 +50,7 @@ export default class App extends Component {
 	performSearch = (query = 'sun') => {
 		axios
 			.get(
-				`https://api.unsplash.com/search/photos/?page=1&per_page=20&query=${query}&client_id=${cred.APP_ID}`
+				`https://api.unsplash.com/search/photos/?page=1&per_page=20&query=${query}&client_id=${process.env.APP_ID}`
 			)
 			.then(data => {
 				this.setState({
