@@ -1,9 +1,23 @@
 .feature-image img {
-  float: left;
-  width: auto;
-  max-height: 1000px;
+
 }
 
 .feature-image .info {
   display: none;
+}
+
+@media (min-width: 0) and (max-width: 549px) {
+  .feature-image img {
+    float: left;
+    width: auto;
+    max-height: 800px;
+    margin-top: -400px;
+  }
+}
+
+@media (min-width: 550px) {
+  .feature-image img {
+    max-height: 1000px;
+    margin-top: 0;
+  }
 }

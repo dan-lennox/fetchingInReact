@@ -2,12 +2,40 @@
   width: 100%;
   float: left;
   margin-bottom: 100px;
-  height: 790px;
   overflow: hidden;
+  position: relative;
 }
 
 .content-demo {
-  width: 60%;
-  position: absolute;
-  left: 40%;
+
+}
+
+@media (min-width: 0) and (max-width: 549px) {
+  .feature-area {
+    height: 450px;
+  }
+
+  .content-demo {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 200px;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .feature-area {
+    height: 800px;
+  }
+
+  .content-demo {
+    width: 60%;
+    height: 800px; /* Fix the height so we can simulate table view just by squishing the image. */
+    left: 40%;
+    position: absolute;
+    margin-top: 0;
+    top: 0;
+  }
 }

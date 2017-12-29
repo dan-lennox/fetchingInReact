@@ -158,9 +158,17 @@ button {
     margin: 20px 0 0;
     font-size: 0;
   }
+  .random-image-button{
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: 550px) {
+  .random-image-button{
+    margin-top: 25px;
+    margin-left: 50px;
+  }
   .img-list li {
     float: left;
     width: 50%;
