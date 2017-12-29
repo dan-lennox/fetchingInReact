@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Img = props =>
-	<li>
-		<a href={props.link}>
-			<img src={props.url} alt="Unsplash Image here" />
-		</a>
-		<p>
-			Photo by
-			<a href={props.user}>{props.name}</a>
-			<a href={props.link}> See on Unsplash</a>
-		</p>
-	</li>;
+export default class Img extends Component {
 
-export default Img;
+  handleClick = e => {
+    this.props.select(this.props.img);
+  }
+
+  render() {
+    return (
+      <li>
+        <a href="#" onClick={this.handleClick}>
+          <img src={this.props.url} alt="Unsplash Image here"/>
+        </a>
+        <p>
+          Photo by
+          <a href={this.props.user}>{this.props.name}</a>
+          <a href={this.props.link}> See on Unsplash</a>
+        </p>
+      </li>
+    );
+  };
+}
