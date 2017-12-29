@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './App.css';
 import './css/featureArea.css';
+
 import FeatureImg from './Components/FeatureImg';
 import ImgList from './Components/ImgList';
 import SearchForm from './Components/SearchForm';
