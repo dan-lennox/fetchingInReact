@@ -35,7 +35,7 @@ export default class App extends Component {
 	randomImage = (query = 'sun') => {
     axios
       .get(
-        `https://api.unsplash.com/photos/random/?query=${query}&orientation=portrait&client_id=${process.env.REACT_APP_UNSPLASH_APP_ID}`
+        `https://api.unsplash.com/photos/random/?collections=1560394&client_id=${process.env.REACT_APP_UNSPLASH_APP_ID}`
       )
       .then(data => {
         console.log('data: ', data);
